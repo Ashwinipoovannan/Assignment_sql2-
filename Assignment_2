@@ -1,0 +1,24 @@
+CREATE DATABASE library_db;
+
+USE library_db;
+
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    book_name VARCHAR(50),
+    cost INT DEFAULT 50
+);
+
+INSERT INTO books VALUES
+(101, 'Python', 350),
+(102, 'Java', 450),
+(103, 'SQL', 200),
+(104, 'C++', 600),
+(105, NULL, 300);
+
+INSERT INTO books (book_id, book_name)
+VALUES (106, 'HTML');
+
+SELECT * FROM books;
+
+SELECT * FROM books
+WHERE cost < 500 AND cost > 100;
